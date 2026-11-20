@@ -8,11 +8,10 @@
 /* ============================================================
    إعداد وتصميم محمود أبوزايد
    AlGawish Academy لتعليم اللغة الإنجليزية
-   ملف HTML واحد - واجهة تجريبية محلية بدون خادم
+   متصل بقاعدة بيانات Supabase و Supabase Storage
    ============================================================ */
 :root{--navy:#111d38;--blue:#345bd2;--blue2:#5478e8;--gold:#f1bd5b;--bg:#f3f6fc;--ink:#1a2742;--muted:#71809b;--line:#e5eaf4;--white:#fff;--green:#13865b;--red:#c43f4c;--shadow:0 14px 40px #14264b12}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1180px;margin:auto;padding:22px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;display:grid;place-items:center;font-size:23px;font-weight:bold}.brand h2{margin:0;font-size:19px}.brand small{color:var(--muted)}.hero{background:linear-gradient(125deg,#111d38,#304b9b);color:white;border-radius:28px;padding:36px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"ENGLISH";position:absolute;left:-8px;bottom:-35px;font-size:78px;font-weight:900;color:#ffffff0c;direction:ltr}.gold{color:var(--gold);font-weight:bold}.hero h1{font-size:clamp(27px,5vw,46px);margin:8px 0}.hero p{color:#dce5ff;max-width:720px}.btn{background:var(--blue);color:#fff;padding:11px 18px;border-radius:12px;font-weight:bold;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn:hover{filter:brightness(1.08)}.btn.alt{background:#edf1ff;color:var(--blue)}.btn.dark{background:var(--navy)}.btn.red{background:var(--red)}.btn.green{background:var(--green)}.btn.goldbtn{background:var(--gold);color:#34250b}.btn:disabled{opacity:.5;cursor:not-allowed}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:var(--shadow)}.section{margin-top:23px}.section h2{margin:0 0 7px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin-top:17px}.grade{cursor:pointer;transition:.2s}.grade:hover{transform:translateY(-3px);border-color:#b9c8fa}.grade .n{width:48px;height:48px;border-radius:15px;background:#edf1ff;color:var(--blue);display:grid;place-items:center;font-size:22px;font-weight:bold}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.between{justify-content:space-between}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:bold;font-size:14px}.field input,.field select,.field textarea{width:100%;border:1px solid #d9e0ed;border-radius:11px;padding:11px 12px;background:white;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #345bd21a}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.tab{background:#edf1f8;color:#53627d;padding:9px 15px;border-radius:11px;font-weight:bold}.tab.active{background:var(--navy);color:white}.hidden{display:none!important}.notice{padding:12px 15px;border-radius:12px;background:#fff6df;color:#805b13;margin:12px 0}.notice.error{background:#fff0f0;color:#a62d39}.notice.ok{background:#eaf8f1;color:#126b49}.badge{display:inline-block;border-radius:30px;padding:3px 10px;background:#edf1ff;color:var(--blue);font-size:12px;font-weight:bold}.lesson{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}.lesson:last-child{border:0}.lesson.locked{opacity:.65}.progress{height:9px;background:#e9edf5;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#6b8cf2);width:0}.video{width:100%;max-height:500px;background:#10182b;border-radius:15px;margin:12px 0}.question{padding:16px;border:1px solid var(--line);border-radius:15px;margin:13px 0}.option{display:block;padding:9px 11px;border:1px solid var(--line);border-radius:10px;margin:7px 0;cursor:pointer}.option:hover{background:#f5f7ff}.option input{margin-left:8px}.footer{text-align:center;color:var(--muted);padding:30px 10px;font-size:13px}.lang{border:1px solid #dbe2ef;background:white;border-radius:10px;padding:8px 12px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:600px}th,td{text-align:right;padding:11px;border-bottom:1px solid var(--line)}th{background:#f7f8fc}.small{font-size:12px}.dangertext{color:var(--red)}.success{color:var(--green)}.empty{text-align:center;padding:28px;color:var(--muted)}.stat{background:#f7f8fc;border-radius:14px;padding:14px}.stat b{font-size:24px;display:block;color:var(--blue)}
-/* إعداد وتصميم محمود أبوزايد: تحسينات بصرية إضافية والوضع الليلي */
 body.dark-mode{--bg:#0d1425;--ink:#edf2ff;--muted:#a6b2ca;--white:#151f34;--line:#293651;--shadow:0 14px 40px #0005;background:var(--bg);color:var(--ink)}
 body.dark-mode .field input,body.dark-mode .field select,body.dark-mode .field textarea,body.dark-mode .lang{background:#101a2d;color:#edf2ff;border-color:#35425e}
 body.dark-mode .tab{background:#202d47;color:#d8e1f5}body.dark-mode .tab.active{background:#5478e8;color:white}
@@ -25,7 +24,6 @@ body.dark-mode .sub-panel{background:#302a1c;color:#f6e4b4;border-color:#6e5930}
 
 @media(max-width:650px){.wrap{padding:13px}.hero{padding:24px}.topbar{align-items:flex-start}.brand h2{font-size:16px}.lesson{align-items:flex-start;flex-direction:column}.hero:after{font-size:45px}}
 
-/* إعداد وتصميم محمود أبوزايد: تصميم قسم استفسارات المنصة */
 .inquiry-card{
   display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
   border:1px solid rgba(49,91,216,.18);
@@ -41,7 +39,6 @@ body.dark-mode .inquiry-card{
 .inquiry-card small{width:100%}
 @media(max-width:650px){.inquiry-btn{width:100%;min-width:0}}
 
-/* إعداد وتصميم محمود أبوزايد: ألوان التصحيح الفوري وقفل الإجابات */
 .option.answer-correct{background:#dcfce7!important;border:2px solid #16a34a!important;color:#14532d!important}
 .option.answer-wrong{background:#fee2e2!important;border:2px solid #dc2626!important;color:#7f1d1d!important}
 .option input:disabled{cursor:not-allowed}
@@ -50,15 +47,10 @@ body.dark-mode .inquiry-card{
 .feedback-wrong{background:#fee2e2;color:#991b1b}
 .exam-result-content{text-align:center;padding:12px}
 .result-icon{font-size:48px}
-.result-score{font-size:48px;font-weight:900;color:var(--primary);margin:10px}
+.result-score{font-size:48px;font-weight:900;color:var(--blue);margin:10px}
 #examFinalResult{margin-top:18px;border:2px solid var(--gold)}
 #submitExamBtn:disabled{opacity:.55;cursor:not-allowed}
 
-
-/* ============================================================
-   إعداد وتصميم محمود أبوزايد
-   تطوير بصري وتجربة استخدام محسّنة لمنصة AlGawish Academy
-   ============================================================ */
 :root{
   --blue:#315bd8;--blue2:#6488f4;--gold:#f4c45e;
   --glow:0 18px 55px rgba(42,82,180,.16);
@@ -125,10 +117,6 @@ body.dark-mode .mini-tag{background:#26395f;color:#cbd8ff}
   *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
 
-
-/* ============================================================
-   إعداد وتصميم محمود أبوزايد - تبسيط الواجهة وتطوير لوحة المعلم
-   ============================================================ */
 :root{--radius-lg:24px;--shadow:0 12px 34px rgba(24,45,92,.09)}
 .wrap{max-width:1240px;padding:clamp(12px,2.4vw,28px)}
 .topbar{position:sticky;top:0;z-index:20;padding:10px 14px;margin:0 -8px 20px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px}
@@ -148,10 +136,6 @@ body.dark-mode .topbar{background:#101a2ddd}body.dark-mode .teacher-stat{backgro
 @media(max-width:760px){.teacher-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar{position:static;align-items:flex-start}.teacher-admin-hero{padding:18px}}
 @media(max-width:430px){.teacher-stat-grid{gap:8px}.teacher-stat{padding:12px}.teacher-stat b{font-size:22px}}
 
-/* ============================================================
-   إعداد وتصميم محمود أبوزايد
-   إزالة الزخارف النجمية وتبسيط تجربة الطالب
-   ============================================================ */
 .student-dashboard:after{
   content:"";position:absolute;left:30px;top:-42px;width:150px;height:150px;
   border:1px solid #ffffff22;border-radius:30px;transform:rotate(24deg);
@@ -180,54 +164,42 @@ body.dark-mode .lesson:hover{background:#202d47}
   .student-shortcuts-note{width:100%;text-align:center}
   .lesson-tools{top:8px}
 }
-
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- إعداد وتصميم محمود أبوزايد: شريط الهوية والتحكم باللغة -->
   <header class="topbar">
     <div class="brand"><div class="logo">A</div><div><h2 data-ar="AlGawish Academy" data-en="AlGawish Academy">AlGawish Academy</h2><small>English Learning Platform</small></div></div>
-    <div class="row"><button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙 الوضع الليلي</button><button class="lang" id="langBtn" onclick="toggleLanguage()">English</button><button class="btn alt" onclick="goHome()" data-ar="الرئيسية" data-en="Home">الرئيسية</button></div>
+    <div class="row">
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙 الوضع الليلي</button>
+      <button class="lang" id="langBtn" onclick="toggleLanguage()">English</button>
+      <button class="btn alt" onclick="goHome()" data-ar="الرئيسية" data-en="Home">الرئيسية</button>
+      <button class="btn red hidden" id="logoutTopBtn" onclick="logout()">خروج</button>
+    </div>
   </header>
 
-  <!-- إعداد وتصميم محمود أبوزايد: الواجهة الرئيسية للمنصة -->
   <section id="homeView">
     <div class="hero">
       <div class="gold">ENGLISH • LEARN • PRACTICE</div>
       <h1 data-ar="اتعلم الإنجليزية بثقة وابدأ طريق التفوق" data-en="Learn English with confidence">اتعلم الإنجليزية بثقة وابدأ طريق التفوق</h1>
       <h2 style="margin:0">مرفت الجاويش <span class="gold">| Mervat AlGawish</span></h2>
       <p data-ar="منصة تعليمية منظمة حسب الصف الدراسي والمنهج، تضم فيديوهات شرح وامتحانات تفاعلية ومتابعة لمستوى الطالب." data-en="A curriculum-based learning platform with lesson videos, interactive exams and student progress tracking.">منصة تعليمية منظمة حسب الصف الدراسي والمنهج، تضم فيديوهات شرح وامتحانات تفاعلية ومتابعة لمستوى الطالب.</p>
-      <div class="row"><button class="btn goldbtn" onclick="showAuth()" data-ar="ابدأ الآن ←" data-en="Start now →">ابدأ الآن ←</button><span class="badge" style="background:#ffffff20;color:white">نظام اجتياز 50%</span></div>
+      <div class="row"><button class="btn goldbtn" onclick="showAuth()" data-ar="تسجيل الدخول / ابدأ الآن ←" data-en="Sign in / Start now →">تسجيل الدخول / ابدأ الآن ←</button><span class="badge" style="background:#ffffff20;color:white">الدخول مطلوب لفتح المحتوى</span></div>
     </div>
     <div class="grid section">
       <div class="card feature-card"><div class="feature-icon">🎧</div><h3>استمع وافهم</h3><p class="muted">فيديوهات شرح تساعدك تتعلم خطوة بخطوة.</p></div>
       <div class="card feature-card"><div class="feature-icon">🧠</div><h3>اختبر معلوماتك</h3><p class="muted">امتحانات تفاعلية تثبّت فهمك وتتابع تقدمك.</p></div>
       <div class="card feature-card"><div class="feature-icon">🏅</div><h3>تابع إنجازك</h3><p class="muted">شاهد تقدمك واحتفل بكل خطوة ناجحة.</p></div>
     </div>
-    <div class="section"><h2 data-ar="اختر صفك الدراسي" data-en="Choose your grade">اختر صفك الدراسي</h2><p class="muted" data-ar="ابدأ من صفك للوصول إلى الدروس والامتحانات." data-en="Choose your grade to access lessons and exams.">ابدأ من صفك للوصول إلى الدروس والامتحانات.</p>
+    <div class="section"><h2 data-ar="اختر صفك الدراسي" data-en="Choose your grade">اختر صفك الدراسي</h2><p class="muted" data-ar="سجّل دخولك أولاً للوصول إلى الدروس والامتحانات الخاصة بصفك." data-en="Sign in first to access lessons and exams.">سجّل دخولك أولاً للوصول إلى الدروس والامتحانات الخاصة بصفك.</p>
       <div class="grid">
         <div class="card grade" onclick="showAuthForGrade('prep')"><div class="n">🎒</div><h3>المرحلة الإعدادية</h3><p class="muted">أولى إعدادي • تانية إعدادي • تالتة إعدادي</p></div>
         <div class="card grade" onclick="showAuthForGrade('sec')"><div class="n">🎓</div><h3>المرحلة الثانوية</h3><p class="muted">أولى ثانوي • تانية ثانوي • تالتة ثانوي</p></div>
       </div>
     </div>
-    <div class="section card"><h2 data-ar="نظام التعلم" data-en="How it works">نظام التعلم</h2><div class="grid"><div><b>🎥 <span data-ar="شاهد الدرس" data-en="Watch the lesson">شاهد الدرس</span></b><p class="muted" data-ar="شاهد فيديو الشرح الذي يضيفه المدرس." data-en="Watch the video uploaded by the teacher.">شاهد فيديو الشرح الذي يضيفه المدرس.</p></div><div><b>📝 <span data-ar="حل الامتحان" data-en="Take the exam">حل الامتحان</span></b><p class="muted" data-ar="اختبر فهمك بعد كل درس." data-en="Test your understanding after each lesson.">اختبر فهمك بعد كل درس.</p></div><div><b>🔓 <span data-ar="افتح الدرس التالي" data-en="Unlock the next lesson">افتح الدرس التالي</span></b><p class="muted" data-ar="احصل على 50% على الأقل للانتقال للدرس التالي." data-en="Score at least 50% to unlock the next lesson.">احصل على 50% على الأقل للانتقال للدرس التالي.</p></div></div></div>
-
-
-
-
-
-    <div class="section">
-      <h2>✨ تعلم معنا خطوة بخطوة</h2>
-      <div class="grid">
-        <div class="card feature-card"><div class="feature-icon">📚</div><h3>منهجك في مكان واحد</h3><p class="muted">دروس مرتبة حسب المرحلة والصف والوحدة.</p></div>
-        <div class="card feature-card"><div class="feature-icon">🎧</div><h3>اسمع وافهم وطبّق</h3><p class="muted">شاهد الشرح ثم اختبر فهمك فوراً.</p></div>
-        <div class="card feature-card"><div class="feature-icon">🏆</div><h3>تابع تقدمك</h3><p class="muted">اعرف درجاتك والدروس التي اجتزتها.</p></div>
-      </div>
-    </div>
+    <div class="section card"><h2 data-ar="نظام التعلم" data-en="How it works">نظام التعلم</h2><div class="grid"><div><b>🔐 <span data-ar="سجّل دخولك" data-en="Sign in">سجّل دخولك</span></b><p class="muted" data-ar="ادخل بحسابك لمتابعة دروسك من أي متصفح." data-en="Sign in to access your lessons from any browser.">ادخل بحسابك لمتابعة دروسك من أي متصفح.</p></div><div><b>🎥 <span data-ar="شاهد الدرس" data-en="Watch the lesson">شاهد الدرس</span></b><p class="muted" data-ar="شاهد فيديو الشرح المرفوع على المنصة." data-en="Watch the lesson video uploaded to the platform.">شاهد فيديو الشرح المرفوع على المنصة.</p></div><div><b>🔓 <span data-ar="افتح الدرس التالي" data-en="Unlock the next lesson">افتح الدرس التالي</span></b><p class="muted" data-ar="احصل على 50% على الأقل للانتقال للدرس التالي." data-en="Score at least 50% to unlock the next lesson.">احصل على 50% على الأقل للانتقال للدرس التالي.</p></div></div></div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: منطقة تسجيل الطالب أو المدرس -->
   <section id="authView" class="hidden">
     <div class="card" style="max-width:560px;margin:25px auto">
       <button class="btn alt" onclick="goHome()">← <span data-ar="رجوع" data-en="Back">رجوع</span></button>
@@ -239,7 +211,6 @@ body.dark-mode .lesson:hover{background:#202d47}
         <div class="field"><label>كلمة المرور</label><input id="studentPassword" type="password" minlength="6" placeholder="6 أحرف على الأقل"></div>
         <div class="field"><label>المرحلة الدراسية</label><select id="studentStage" onchange="updateGradeChoices()"><option value="">اختر المرحلة</option><option value="prep">إعدادي</option><option value="sec">ثانوي</option></select></div>
         <div class="field"><label>الصف الدراسي</label><select id="studentGrade" onchange="updateSchoolTypeVisibility()"><option value="">اختر المرحلة أولاً</option></select></div>
-        <!-- إعداد وتصميم محمود أبوزايد: اختيار عربي أو لغات للإعدادي كله وأولى ثانوي فقط -->
         <div class="field hidden" id="schoolTypeField">
           <label>نوع الدراسة</label>
           <select id="studentSchoolType">
@@ -248,22 +219,20 @@ body.dark-mode .lesson:hover{background:#202d47}
           </select>
           <small class="muted">اختيار لغات متاح للصفوف من أولى إعدادي إلى تالتة إعدادي، وللصف الأول الثانوي فقط.</small>
         </div>
-        <button class="btn" onclick="studentLogin()">دخول / إنشاء حساب</button>
+        <button class="btn" id="studentLoginBtn" onclick="studentLogin()">دخول / إنشاء حساب</button>
       </div>
       <div id="teacherAuth" class="hidden">
         <div class="notice">🔐 <span data-ar="هذه المنطقة مخصصة للمدرس فقط." data-en="Teacher access only.">هذه المنطقة مخصصة للمدرس فقط.</span></div>
         <div class="field"><label data-ar="كلمة مرور المدرس" data-en="Teacher password">كلمة مرور المدرس</label><input id="teacherPassword" type="password" placeholder="••••••••••"></div>
-        <button class="btn dark" onclick="teacherLogin()" data-ar="دخول لوحة المدرس" data-en="Open teacher dashboard">دخول لوحة المدرس</button>
+        <button class="btn dark" id="teacherLoginBtn" onclick="teacherLogin()" data-ar="دخول لوحة المدرس" data-en="Open teacher dashboard">دخول لوحة المدرس</button>
       </div>
       <div id="authMessage"></div>
     </div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: واجهة الصف وقائمة الدروس -->
   <section id="gradeView" class="hidden">
-    <div class="row between"><button class="btn alt" onclick="goHome()">← <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></button><span id="currentUser" class="badge"></span></div>
+    <div class="row between"><button class="btn red" onclick="logout()">تسجيل الخروج</button><span id="currentUser" class="badge"></span></div>
 
-    <!-- إعداد وتصميم محمود أبوزايد: لوحة متابعة شخصية للطالب داخل كل صف -->
     <div id="studentDashboard" class="student-dashboard">
       <div class="pill-row"><span class="mini-tag">YOUR LEARNING JOURNEY</span><span class="mini-tag">📘 خطوة جديدة نحو التفوق</span></div>
       <h2 id="dashboardGreeting" style="margin:8px 0 0">أهلاً بك في رحلتك التعليمية!</h2>
@@ -281,22 +250,14 @@ body.dark-mode .lesson:hover{background:#202d47}
       </div>
     </div>
 
-    <!-- إعداد وتصميم محمود أبوزايد: بطاقة المعلمة داخل صفحة كل صف دراسي -->
     <div class="section card teacher-profile">
       <div class="row between">
         <div><span class="badge">معلمة اللغة الإنجليزية</span><h2>مرفت الجاويش | Mervat AlGawish</h2></div>
         <div class="feature-icon">👩‍🏫</div>
       </div>
       <p class="muted">شرح مبسّط ومنظّم، متابعة لمستوى الطلاب، وتدريب عملي على مهارات اللغة الإنجليزية وفق المنهج الدراسي.</p>
-      <div class="grid">
-        <div><b>📖 تبسيط القواعد</b><p class="muted small">تقديم القواعد بطريقة واضحة مع أمثلة وتطبيقات.</p></div>
-        <div><b>🗣️ تنمية مهارات اللغة</b><p class="muted small">الاهتمام بالقراءة والاستماع والكتابة والمفردات.</p></div>
-        <div><b>📝 تدريب وقياس المستوى</b><p class="muted small">امتحانات بعد الدروس ومتابعة مستمرة للتقدم.</p></div>
-        <div><b>🤝 دعم وتحفيز الطلاب</b><p class="muted small">تشجيع الطالب ومساعدته على تحسين مستواه بثقة.</p></div>
-      </div>
     </div>
 
-    <!-- إعداد وتصميم محمود أبوزايد: قسم استفسارات الطلاب، برسالة واتساب تلقائية حسب بيانات الطالب -->
     <div class="section card inquiry-card">
       <div class="inquiry-copy">
         <span class="badge">💬 نحن هنا لمساعدتك</span>
@@ -309,7 +270,6 @@ body.dark-mode .lesson:hover{background:#202d47}
       <small class="muted">ستفتح المحادثة والرسالة جاهزة؛ اضغط «إرسال» داخل واتساب لإرسال استفسارك.</small>
     </div>
 
-    <!-- إعداد وتصميم محمود أبوزايد: رسائل التشجيع داخل صفحة كل صف دراسي -->
     <div class="section card encouragement">
       <h2>رسالتنا لكل طالب</h2>
       <p class="muted">كل خطوة صغيرة تقرّبك من هدفك. لا تخف من الخطأ؛ فالخطأ بداية الفهم، والاستمرار هو طريق التفوق.</p>
@@ -321,7 +281,6 @@ body.dark-mode .lesson:hover{background:#202d47}
     </div>
 
     <div class="card section"><div class="row between"><h2 id="gradeTitle"></h2><span class="badge">📚 خطتك التعليمية</span></div><p class="muted">دروسك مرتبة حسب المنهج. شاهد الدرس التعريفي المجاني، ثم فعّل اشتراكك للوصول لباقي المحتوى.</p><div id="studentSubscription"></div>
-      <!-- إعداد وتصميم محمود أبوزايد: البحث السريع وتصنيف الدروس -->
       <div class="lesson-tools">
         <input id="lessonSearch" type="search" placeholder="🔎 ابحث عن درس بالاسم..." oninput="renderLessons()">
         <button class="lesson-filter active" data-filter="all" onclick="setLessonFilter('all',this)">كل الدروس</button>
@@ -331,73 +290,113 @@ body.dark-mode .lesson:hover{background:#202d47}
       <div id="lessonList"></div></div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: مشاهدة الفيديو والانتقال إلى الامتحان -->
   <section id="lessonView" class="hidden">
     <button class="btn alt" onclick="backToGrade()">← <span data-ar="العودة للدروس" data-en="Back to lessons">العودة للدروس</span></button>
-    <div class="card section"><h2 id="lessonTitle"></h2><p id="lessonDescription" class="muted"></p><video id="lessonVideo" class="video" controls playsinline></video><div class="row between"><span id="watchHint" class="muted small"></span><button class="btn" id="startExamBtn" onclick="openExam()" data-ar="ابدأ امتحان الدرس" data-en="Start lesson exam">ابدأ امتحان الدرس</button></div></div>
+    <div class="card section"><h2 id="lessonTitle"></h2><p id="lessonDescription" class="muted"></p><video id="lessonVideo" class="video" controls playsinline preload="metadata"></video><div class="row between"><span id="watchHint" class="muted small"></span><button class="btn" id="startExamBtn" onclick="openExam()" data-ar="ابدأ امتحان الدرس" data-en="Start lesson exam">ابدأ امتحان الدرس</button></div></div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: الامتحان التفاعلي والتصحيح -->
   <section id="examView" class="hidden">
     <button class="btn alt" onclick="backToGrade()">← <span data-ar="العودة للدروس" data-en="Back to lessons">العودة للدروس</span></button>
     <div class="card section"><h2 id="examTitle"></h2><p class="muted" data-ar="اختر إجابة واحدة لكل سؤال. بمجرد اختيارك سيتم تثبيت إجابتك ولن تستطيع تغييرها." data-en="Choose one answer for each question, then submit.">اختر إجابة واحدة لكل سؤال. بمجرد اختيارك سيتم تثبيت إجابتك ولن تستطيع تغييرها.</p><div id="examQuestions"></div>
       <button class="btn green" id="submitExamBtn" onclick="submitExam()" data-ar="تسليم الامتحان" data-en="Submit exam">تسليم الامتحان</button>
     </div>
-    <!-- إعداد وتصميم محمود أبوزايد: مساحة مستقلة لعرض نتيجة الامتحان -->
     <div id="examFinalResult" class="card section hidden" aria-live="polite"></div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: لوحة تحكم المدرس وإدارة المحتوى والطلاب -->
   <section id="teacherView" class="hidden">
     <div class="teacher-admin-hero"><div class="gold">MERVAT ALGAWISH • TEACHER SPACE</div><h1 data-ar="أهلاً بكِ في لوحة المعلمة" data-en="Welcome to your teacher dashboard">أهلاً بكِ في لوحة المعلمة</h1><p>كل أدوات إدارة الأكاديمية والطلاب في مكان واحد وبخطوات بسيطة.</p><div class="row" style="margin-top:14px"><button class="btn goldbtn" onclick="logout()" data-ar="تسجيل الخروج" data-en="Log out">تسجيل الخروج</button><button class="btn alt" onclick="teacherTab('students',document.querySelectorAll('#teacherView .tab')[2])">متابعة الطلاب</button></div></div>
     <div class="teacher-stat-grid" id="teacherStats"></div>
-    <div class="teacher-tools"><b>🧰 أدوات سريعة</b><button class="btn alt" onclick="exportAcademyData()">⬇️ تصدير نسخة بيانات</button><label class="btn alt" for="importAcademyFile">⬆️ استيراد نسخة بيانات</label><input id="importAcademyFile" type="file" accept="application/json,.json" hidden onchange="importAcademyData(event)"><span class="muted small">النسخة تشمل الحسابات والدرجات والاشتراكات والدروس والامتحانات، ولا تشمل ملفات الفيديو.</span></div>
+    <div class="teacher-tools"><b>🧰 أدوات سريعة</b><button class="btn alt" onclick="exportAcademyData()">⬇️ تصدير نسخة بيانات</button><label class="btn alt" for="importAcademyFile">⬆️ استيراد نسخة بيانات</label><input id="importAcademyFile" type="file" accept="application/json,.json" hidden onchange="importAcademyData(event)"><span class="muted small">النسخة تشمل الحسابات والدرجات والاشتراكات والدروس والامتحانات من قاعدة البيانات.</span></div>
     <div class="tabs"><button class="tab active" onclick="teacherTab('content',this)" data-ar="إدارة الدروس" data-en="Lessons">إدارة الدروس</button><button class="tab" onclick="teacherTab('exam',this)" data-ar="إنشاء امتحان" data-en="Create exam">إنشاء امتحان</button><button class="tab" onclick="teacherTab('students',this)" data-ar="الطلاب والدرجات" data-en="Students & grades">الطلاب والدرجات</button></div>
     <div id="teacherContent" class="card">
       <h2 data-ar="إضافة درس جديد" data-en="Add a lesson">إضافة درس جديد</h2>
       <div class="grid"><div class="field"><label data-ar="الصف الدراسي" data-en="Grade">الصف الدراسي</label><select id="newGrade"><option value="prep1">أولى إعدادي</option><option value="prep2">تانية إعدادي</option><option value="prep3">تالتة إعدادي</option><option value="sec1">أولى ثانوي</option><option value="sec2">تانية ثانوي</option><option value="sec3">تالتة ثانوي</option></select></div><div class="field"><label data-ar="عنوان الدرس" data-en="Lesson title">عنوان الدرس</label><input id="newLessonTitle"></div></div>
       <div class="field"><label data-ar="وصف الدرس" data-en="Description">وصف الدرس</label><textarea id="newLessonDesc" rows="2"></textarea></div>
-      <div class="field"><label data-ar="فيديو الدرس من جهازك" data-en="Lesson video from your device">فيديو الدرس من جهازك</label><input type="file" id="newLessonVideo" accept="video/*"></div>
-      <button class="btn" onclick="addLesson()" data-ar="حفظ الدرس والفيديو" data-en="Save lesson and video">حفظ الدرس والفيديو</button><div id="lessonAdminMessage"></div><hr>
+      <div class="field"><label data-ar="فيديو الدرس من جهازك (يُرفع سحابياً ليظهر لكل الطلاب)" data-en="Lesson video">فيديو الدرس من جهازك (يُرفع سحابياً ليظهر لكل الطلاب)</label><input type="file" id="newLessonVideo" accept="video/*"></div>
+      <button class="btn" id="addLessonBtn" onclick="addLesson()" data-ar="رفع وحفظ الدرس والفيديو" data-en="Upload and save lesson">رفع وحفظ الدرس والفيديو</button><div id="lessonAdminMessage"></div><hr>
       <h3 class="teacher-section-title" data-ar="الدروس المضافة" data-en="Added lessons">الدروس المضافة</h3><div class="field"><input id="adminLessonSearch" type="search" placeholder="ابحث عن درس أو صف..." oninput="renderAdminLessons()"></div><div id="adminLessonList"></div>
     </div>
     <div id="teacherExam" class="card hidden">
       <h2 data-ar="إنشاء امتحان أونلاين" data-en="Create online exam">إنشاء امتحان أونلاين</h2>
       <div class="field"><label data-ar="اختر الدرس" data-en="Choose lesson">اختر الدرس</label><select id="examLesson"></select></div>
       <div class="field"><label data-ar="عنوان الامتحان" data-en="Exam title">عنوان الامتحان</label><input id="newExamTitle" placeholder="امتحان الدرس الأول"></div>
-      <div id="questionBuilder"></div><button class="btn alt" onclick="addQuestionEditor()" data-ar="+ إضافة سؤال" data-en="+ Add question">+ إضافة سؤال</button> <button class="btn" onclick="saveExam()" data-ar="حفظ الامتحان" data-en="Save exam">حفظ الامتحان</button><div id="examAdminMessage"></div>
+      <div id="questionBuilder"></div><button class="btn alt" onclick="addQuestionEditor()" data-ar="+ إضافة سؤال" data-en="+ Add question">+ إضافة سؤال</button> <button class="btn" id="saveExamBtn" onclick="saveExam()" data-ar="حفظ الامتحان" data-en="Save exam">حفظ الامتحان</button><div id="examAdminMessage"></div>
     </div>
     <div id="teacherStudents" class="card hidden">
       <h2 class="teacher-section-title">متابعة الطلاب والاشتراكات والدرجات</h2><div class="field"><input id="studentAdminSearch" type="search" placeholder="ابحث باسم الطالب أو رقم الهاتف..." oninput="renderStudentsTable()"></div><p class="muted">تحكم في اشتراك الطالب: شهر بعدد حصص محدد أو ترم يفتح كل دروس الصف حتى تاريخ الانتهاء.</p><div id="studentsTable"></div>
     </div>
   </section>
 
-  <!-- إعداد وتصميم محمود أبوزايد: التذييل وبيانات المعلمة وحقوق التصميم -->
   <footer class="footer">معلمة المادة: <b>مرفت الجاويش | Mervat AlGawish</b><br>للتواصل مع مسؤول المنصة: <b dir="ltr">01515272692</b><br><b>إعداد وتصميم محمود أبوزايد</b><br>جميع الحقوق محفوظة © <span id="year"></span></footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* ============================================================
    إعداد وتصميم محمود أبوزايد
-   تنبيه مهم: هذا ملف تجريبي يعمل محلياً على نفس المتصفح والجهاز.
-   لا يحتوي على خادم أو قاعدة بيانات سحابية.
+   ربط كامل بـ Supabase Database + Supabase Storage + تسجيل دخول إجباري
    ============================================================ */
+const SUPABASE_URL = "https://xvlzoaabvrpgxuqqbuxy.supabase.co";
+const SUPABASE_KEY = "sb_publishable_cFTcwk_Y6iitXA5qeQ26OA_7HNPIEEX";
+const VIDEO_BUCKET = "lesson-videos";
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-/* كلمة مرور المدرس: وضعت كما طلب صاحب المشروع.
-   تنبيه أمني: أي كلمة مرور داخل HTML يمكن رؤيتها من مصدر الصفحة،
-   لذلك لا تستخدم هذا الملف وحده كمنصة عامة على الإنترنت. */
 const TEACHER_PASSWORD = "112233445566778899";
 
-/* أسماء مفاتيح التخزين المحلي للطلاب والدروس والامتحانات والنتائج */
-const DB_KEYS = {students:"mg_students_v1", lessons:"mg_lessons_v1", exams:"mg_exams_v1", progress:"mg_progress_v1", subscriptions:"mg_subscriptions_v1", session:"mg_session_v1"};
-let currentGrade = 1;
+const DB_KEYS = {
+  students:"mg_students_v1",
+  lessons:"mg_lessons_v1",
+  exams:"mg_exams_v1",
+  progress:"mg_progress_v1",
+  subscriptions:"mg_subscriptions_v1",
+  session:"mg_session_v1"
+};
+
+let currentGrade = "sec1";
 let currentLessonId = null;
 let currentExam = null;
 let language = "ar";
 let questionEditorCount = 0;
 let activeLessonFilter = "all";
+let examLockedAnswers = {};
 
-/* أدوات مساعدة للتعامل مع التخزين المحلي */
+function mapStudentFromDB(r){
+  return {
+    id:r.id,name:r.name,phone:r.phone,identity:r.phone,password:r.password,
+    stage:r.stage,grade:r.grade,schoolType:r.school_type||"general",createdAt:r.created_at
+  };
+}
+function mapLessonFromDB(r){
+  return {
+    id:r.id,grade:r.grade,title:r.title,description:r.description||"",
+    videoUrl:r.video_url||"",order:Number(r.sort_order||1),createdAt:r.created_at
+  };
+}
+function mapExamFromDB(r){
+  return {
+    id:r.id,lessonId:r.lesson_id,title:r.title,
+    questions:Array.isArray(r.questions)?r.questions:[],createdAt:r.created_at
+  };
+}
+function mapProgressFromDB(r){
+  return {
+    id:r.id,studentId:r.student_id,lessonId:r.lesson_id,
+    score:Number(r.score||0),lastScore:Number(r.last_score??r.score??0),
+    attempts:Number(r.attempts||0),examSubmitted:!!r.exam_submitted,
+    allowRetake:!!r.allow_retake,teacherUnlocked:!!r.teacher_unlocked,
+    savedAnswers:Array.isArray(r.saved_answers)?r.saved_answers:[],
+    attemptHistory:Array.isArray(r.attempt_history)?r.attempt_history:[],
+    updatedAt:r.updated_at
+  };
+}
+function mapSubFromDB(r){
+  return {
+    id:r.id,studentId:r.student_id,type:r.sub_type,
+    lessonLimit:Number(r.lesson_limit||0),expiresAt:r.expires_at,
+    cancelled:!!r.cancelled,activatedAt:r.activated_at
+  };
+}
+
 function readDB(key, fallback=[]){try{return JSON.parse(localStorage.getItem(key)) ?? fallback}catch(e){return fallback}}
 function writeDB(key,value){localStorage.setItem(key,JSON.stringify(value))}
 function getStudents(){return readDB(DB_KEYS.students)}
@@ -405,33 +404,121 @@ function getLessons(){return readDB(DB_KEYS.lessons)}
 function getExams(){return readDB(DB_KEYS.exams)}
 function getProgress(){return readDB(DB_KEYS.progress)}
 function saveProgress(list){writeDB(DB_KEYS.progress,list)}
-function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,9)}
+function uid(){return crypto.randomUUID ? crypto.randomUUID() : (Date.now().toString(36)+Math.random().toString(36).slice(2,9))}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function currentSession(){return readDB(DB_KEYS.session,null)}
 function setMessage(id,text,type=""){const el=document.getElementById(id);if(el)el.innerHTML=text?`<div class="notice ${type}">${esc(text)}</div>`:""}
 
-/* نظام IndexedDB لحفظ ملفات الفيديو محلياً حتى بعد إغلاق الصفحة */
+/* التحقق الإجباري من تسجيل الدخول لأي محتوى أو صفحة داخلية */
+function isAuthenticated(requiredRole=null){
+  const s=currentSession();
+  if(!s || !s.role)return false;
+  if(requiredRole && s.role!==requiredRole)return false;
+  if(s.role==="student" && !s.studentId)return false;
+  return true;
+}
+function updateHeaderAuthState(){
+  const logoutBtn=document.getElementById("logoutTopBtn");
+  if(logoutBtn)logoutBtn.classList.toggle("hidden",!isAuthenticated());
+}
+
+/* مزامنة البيانات الكاملة من Supabase */
+async function syncAllFromSupabase(){
+  const [stRes, leRes, exRes, reRes, suRes] = await Promise.all([
+    sb.from("students").select("*"),
+    sb.from("lessons").select("*").order("sort_order",{ascending:true}),
+    sb.from("exams").select("*"),
+    sb.from("results").select("*"),
+    sb.from("subscriptions").select("*")
+  ]);
+  if(stRes.error) throw stRes.error;
+  if(leRes.error) throw leRes.error;
+  if(exRes.error) throw exRes.error;
+  if(reRes.error) throw reRes.error;
+  if(suRes.error) throw suRes.error;
+
+  writeDB(DB_KEYS.students,(stRes.data||[]).map(mapStudentFromDB));
+  writeDB(DB_KEYS.lessons,(leRes.data||[]).map(mapLessonFromDB));
+  writeDB(DB_KEYS.exams,(exRes.data||[]).map(mapExamFromDB));
+  writeDB(DB_KEYS.progress,(reRes.data||[]).map(mapProgressFromDB));
+  writeDB(DB_KEYS.subscriptions,(suRes.data||[]).map(mapSubFromDB));
+}
+
+/* كاش محلي احتياطي للفيديو إذا احتجنا له */
 let videoDBPromise = new Promise((resolve,reject)=>{
   const req=indexedDB.open("MerfatEnglishVideoFiles",1);
   req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains("videos"))db.createObjectStore("videos")};
   req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
 });
-async function saveVideo(file,id){
-  const db=await videoDBPromise;
-  return new Promise((resolve,reject)=>{const tx=db.transaction("videos","readwrite");tx.objectStore("videos").put(file,id);tx.oncomplete=()=>resolve(true);tx.onerror=()=>reject(tx.error)});
+async function saveLocalVideoCache(file,id){
+  try{
+    const db=await videoDBPromise;
+    return new Promise((resolve)=>{const tx=db.transaction("videos","readwrite");tx.objectStore("videos").put(file,id);tx.oncomplete=()=>resolve(true);tx.onerror=()=>resolve(false)});
+  }catch(e){return false}
 }
-async function getVideo(id){
-  const db=await videoDBPromise;
-  return new Promise((resolve,reject)=>{const tx=db.transaction("videos","readonly");const req=tx.objectStore("videos").get(id);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error)});
+async function getLocalVideoCache(id){
+  try{
+    const db=await videoDBPromise;
+    return new Promise((resolve)=>{const tx=db.transaction("videos","readonly");const req=tx.objectStore("videos").get(id);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>resolve(null)});
+  }catch(e){return null}
 }
-async function deleteVideo(id){
-  const db=await videoDBPromise;
-  return new Promise((resolve,reject)=>{const tx=db.transaction("videos","readwrite");tx.objectStore("videos").delete(id);tx.oncomplete=()=>resolve(true);tx.onerror=()=>reject(tx.error)});
+async function deleteLocalVideoCache(id){
+  try{
+    const db=await videoDBPromise;
+    return new Promise((resolve)=>{const tx=db.transaction("videos","readwrite");tx.objectStore("videos").delete(id);tx.oncomplete=()=>resolve(true);tx.onerror=()=>resolve(false)});
+  }catch(e){return false}
 }
 
-/* إظهار شاشة واحدة فقط لتسهيل التنقل داخل ملف HTML الواحد */
+/* رفع فيديو الدرس إلى Supabase Storage وإرجاع الرابط العام */
+async function uploadLessonVideoToStorage(lessonId, file){
+  const rawExt=(file.name.split(".").pop()||"mp4").toLowerCase().replace(/[^a-z0-9]/g,"")||"mp4";
+  const filePath=`${lessonId}.${rawExt}`;
+  const { error: upErr } = await sb.storage
+    .from(VIDEO_BUCKET)
+    .upload(filePath, file, { cacheControl:"3600", upsert:true, contentType:file.type||"video/mp4" });
+  if(upErr) throw upErr;
+
+  const { data: pubData } = sb.storage.from(VIDEO_BUCKET).getPublicUrl(filePath);
+  return { publicUrl: pubData?.publicUrl || "", storagePath: filePath };
+}
+async function deleteLessonVideoFromStorage(lessonId, videoUrl){
+  try{
+    let filePath=`${lessonId}.mp4`;
+    if(videoUrl && videoUrl.includes(`/${VIDEO_BUCKET}/`)){
+      filePath=decodeURIComponent(videoUrl.split(`/${VIDEO_BUCKET}/`)[1].split("?")[0]);
+    }
+    await sb.storage.from(VIDEO_BUCKET).remove([filePath]);
+  }catch(e){console.warn("Storage remove warning:",e)}
+}
+
+/* التحكم بالشاشات ومنع فتح أي شاشة محمية بدون تسجيل دخول */
 const views=["homeView","authView","gradeView","lessonView","examView","teacherView"];
-function showView(id){views.forEach(v=>document.getElementById(v).classList.toggle("hidden",v!==id));window.scrollTo({top:0,behavior:"smooth"})}
+const protectedViews=["gradeView","lessonView","examView","teacherView"];
+
+function showView(id){
+  if(protectedViews.includes(id)){
+    if(!isAuthenticated()){
+      showAuth();
+      setMessage("authMessage","يجب تسجيل الدخول أولاً للوصول إلى الدروس والامتحانات.","error");
+      return;
+    }
+    if(id==="teacherView" && !isAuthenticated("teacher")){
+      showAuth();
+      setAuthMode("teacher");
+      setMessage("authMessage","هذه الصفحة مخصصة للمدرس فقط.","error");
+      return;
+    }
+    if((id==="gradeView"||id==="lessonView"||id==="examView") && !isAuthenticated("student")){
+      showAuth();
+      setAuthMode("student");
+      setMessage("authMessage","سجّل دخولك كطالب لعرض الصف والدروس والامتحانات.","error");
+      return;
+    }
+  }
+  views.forEach(v=>document.getElementById(v).classList.toggle("hidden",v!==id));
+  updateHeaderAuthState();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
 function goHome(){showView("homeView")}
 function showAuth(){showView("authView")}
 function setAuthMode(mode){
@@ -442,7 +529,6 @@ function setAuthMode(mode){
   setMessage("authMessage","");
 }
 
-/* إنشاء حساب طالب محلي أو تسجيل دخوله */
 function showAuthForGrade(stage){showAuth();setAuthMode("student");document.getElementById("studentStage").value=stage;updateGradeChoices();updateSchoolTypeVisibility()}
 function updateGradeChoices(){
   const stage=document.getElementById("studentStage").value;
@@ -466,7 +552,10 @@ function updateSchoolTypeVisibility(){
     if(schoolType)schoolType.value="general";
   }
 }
-function studentLogin(){
+
+/* تسجيل دخول / إنشاء حساب طالب في Supabase */
+async function studentLogin(){
+  const btn=document.getElementById("studentLoginBtn");
   const name=document.getElementById("studentName").value.trim();
   const phone=document.getElementById("studentPhone").value.trim();
   const password=document.getElementById("studentPassword").value;
@@ -476,28 +565,83 @@ function studentLogin(){
   if(!name||!/^\d{11}$/.test(phone)||!password||password.length<6||!stage||!grade){
     setMessage("authMessage","أكمل البيانات. رقم الهاتف يجب أن يتكون من 11 رقمًا إنجليزيًا فقط، وكلمة المرور 6 أحرف على الأقل.","error");return
   }
-  const students=getStudents();let student=students.find(s=>s.phone===phone);
-  if(student){
-    if(student.password!==password){setMessage("authMessage","كلمة المرور غير صحيحة.","error");return}
-    student.name=name;student.stage=stage;student.grade=grade;student.schoolType=schoolType;
-  }else{
-    student={id:uid(),name,phone,identity:phone,password,stage,grade,schoolType,createdAt:new Date().toISOString()};
+  btn.disabled=true;
+  setMessage("authMessage","جاري تسجيل الدخول وحفظ البيانات...","");
+  try{
+    const { data: existing, error: findErr } = await sb
+      .from("students")
+      .select("*")
+      .eq("phone", phone)
+      .maybeSingle();
+    if(findErr) throw findErr;
+
+    let studentRow;
+    if(existing){
+      if(existing.password!==password){
+        setMessage("authMessage","كلمة المرور غير صحيحة.","error");
+        return;
+      }
+      const { data: updated, error: updErr } = await sb
+        .from("students")
+        .update({ name, stage, grade, school_type: schoolType })
+        .eq("id", existing.id)
+        .select()
+        .single();
+      if(updErr) throw updErr;
+      studentRow = updated;
+    }else{
+      const { data: inserted, error: insErr } = await sb
+        .from("students")
+        .insert([{ name, phone, password, stage, grade, school_type: schoolType }])
+        .select()
+        .single();
+      if(insErr) throw insErr;
+      studentRow = inserted;
+    }
+
+    const student = mapStudentFromDB(studentRow);
+    const students = getStudents().filter(s=>s.id!==student.id);
     students.push(student);
+    writeDB(DB_KEYS.students, students);
+    writeDB(DB_KEYS.session, { role:"student", studentId:student.id });
+    currentGrade = grade;
+    document.getElementById("currentUser").textContent = student.name;
+    setMessage("authMessage","","");
+    updateHeaderAuthState();
+    await openGrade(grade);
+  }catch(err){
+    console.error(err);
+    setMessage("authMessage","تعذر الاتصال بقاعدة البيانات. تأكد من إنشاء الجداول وتفعيل صلاحياتها في Supabase.","error");
+  }finally{
+    btn.disabled=false;
   }
-  writeDB(DB_KEYS.students,students);
-  writeDB(DB_KEYS.session,{role:"student",studentId:student.id});
-  currentGrade=grade;document.getElementById("currentUser").textContent=student.name;
-  openGrade(grade);
 }
-function teacherLogin(){
+
+async function teacherLogin(){
   const pass=document.getElementById("teacherPassword").value;
   if(pass!==TEACHER_PASSWORD){setMessage("authMessage","كلمة المرور غير صحيحة.","error");return}
-  writeDB(DB_KEYS.session,{role:"teacher"});
-  refreshTeacherPanel();showView("teacherView");
+  setMessage("authMessage","جاري تحميل بيانات الأكاديمية...","");
+  try{
+    await syncAllFromSupabase();
+    writeDB(DB_KEYS.session,{role:"teacher"});
+    setMessage("authMessage","","");
+    updateHeaderAuthState();
+    refreshTeacherPanel();
+    showView("teacherView");
+  }catch(err){
+    console.error(err);
+    setMessage("authMessage","تعذر قراءة البيانات من Supabase. راجع سياسات الجدول (RLS) في SQL Editor.","error");
+  }
 }
-function logout(){localStorage.removeItem(DB_KEYS.session);goHome()}
 
-/* التحقق من صلاحية الطالب والدرس السابق */
+function logout(){
+  localStorage.removeItem(DB_KEYS.session);
+  currentLessonId=null;
+  currentExam=null;
+  updateHeaderAuthState();
+  showAuth();
+}
+
 function hasPassed(studentId,lesson){
   const p=getProgress().find(x=>x.studentId===studentId&&x.lessonId===lesson.id);
   return !!(p&&(p.score>=50||p.teacherUnlocked));
@@ -510,22 +654,20 @@ function activeSubscription(studentId){
   return sub;
 }
 function isUnlocked(studentId,lesson){
-  if(!studentId)return false;
+  if(!studentId || !isAuthenticated("student"))return false;
   const lessons=getLessons().filter(l=>l.grade===lesson.grade).sort((a,b)=>a.order-b.order);
   const index=lessons.findIndex(l=>l.id===lesson.id);
-  if(index===0)return true; // أول درس تعريفي مجاني دائماً
+  if(index===0)return true;
   const sub=activeSubscription(studentId);
   const progress=getProgress().find(x=>x.studentId===studentId&&x.lessonId===lesson.id);
-  if(progress?.teacherUnlocked)return true; // المدرس يستطيع فتح أي درس يدوياً
-  if(!sub)return false; // لا توجد دروس مدفوعة دون اشتراك
+  if(progress?.teacherUnlocked)return true;
+  if(!sub)return false;
   if(sub.type==="month" && index>=(Number(sub.lessonLimit)||0)+1)return false;
-  // بعد تفعيل الاشتراك يظل شرط اجتياز امتحان الدرس السابق قائماً
   return hasPassed(studentId,lessons[index-1]);
 }
 function gradeLabel(key){
   return ({prep1:"أولى إعدادي",prep2:"تانية إعدادي",prep3:"تالتة إعدادي",sec1:"أولى ثانوي",sec2:"تانية ثانوي",sec3:"تالتة ثانوي"})[key]||key;
 }
-/* إعداد وتصميم محمود أبوزايد: تجهيز رسالة استفسار واتساب باسم الطالب وصفه ونوع دراسته */
 function updatePlatformInquiryLink(student){
   const link=document.getElementById("platformInquiryLink");
   if(!link||!student)return;
@@ -534,12 +676,44 @@ function updatePlatformInquiryLink(student){
   const message=`السلام عليكم ورحمة الله وبركاته، أنا الطالب ${student.name} في الصف ${grade}، ${studyType}، ولدي استفسار حول المنصة.`;
   link.href="https://wa.me/201229638516?text="+encodeURIComponent(message);
 }
-function openGrade(n){
+
+async function openGrade(n){
+  if(!isAuthenticated("student")){showAuth();setAuthMode("student");setMessage("authMessage","سجّل دخولك كطالب أولاً.","error");return}
   currentGrade=n;
   const session=currentSession();
-  if(!session||session.role!=="student"){showAuth();return}
-  const student=getStudents().find(s=>s.id===session.studentId);
+  let student=getStudents().find(s=>s.id===session.studentId);
+  if(!student){
+    try{await syncAllFromSupabase();student=getStudents().find(s=>s.id===session.studentId)}catch(e){}
+  }
   if(!student){logout();return}
+
+  try{
+    const [leRes, exRes, reRes, suRes] = await Promise.all([
+      sb.from("lessons").select("*").eq("grade",n).order("sort_order",{ascending:true}),
+      sb.from("exams").select("*"),
+      sb.from("results").select("*").eq("student_id",student.id),
+      sb.from("subscriptions").select("*").eq("student_id",student.id).maybeSingle()
+    ]);
+    if(!leRes.error){
+      const others=getLessons().filter(l=>l.grade!==n);
+      writeDB(DB_KEYS.lessons,[...others,...(leRes.data||[]).map(mapLessonFromDB)]);
+    }
+    if(!exRes.error){
+      writeDB(DB_KEYS.exams,(exRes.data||[]).map(mapExamFromDB));
+    }
+    if(!reRes.error){
+      const others=getProgress().filter(p=>p.studentId!==student.id);
+      writeDB(DB_KEYS.progress,[...others,...(reRes.data||[]).map(mapProgressFromDB)]);
+    }
+    if(!suRes.error){
+      const others=readDB(DB_KEYS.subscriptions,[]).filter(s=>s.studentId!==student.id);
+      if(suRes.data)others.push(mapSubFromDB(suRes.data));
+      writeDB(DB_KEYS.subscriptions,others);
+    }
+  }catch(err){
+    console.warn("تم العرض من الكاش المحلي مؤقتاً:",err);
+  }
+
   document.getElementById("currentUser").textContent=student.name;
   updatePlatformInquiryLink(student);
   document.getElementById("gradeTitle").textContent=gradeLabel(n);
@@ -547,8 +721,10 @@ function openGrade(n){
   const search=document.getElementById("lessonSearch");if(search)search.value="";
   document.querySelectorAll(".lesson-filter").forEach(b=>b.classList.toggle("active",b.dataset.filter==="all"));
   renderGradeDashboard(student);
-  renderLessons();showView("gradeView");
+  renderLessons();
+  showView("gradeView");
 }
+
 function renderGradeDashboard(student){
   const lessons=getLessons().filter(l=>l.grade===currentGrade);
   const records=getProgress().filter(p=>p.studentId===student.id&&lessons.some(l=>l.id===p.lessonId));
@@ -569,6 +745,7 @@ function setLessonFilter(filter,button){
   renderLessons();
 }
 function renderLessons(){
+  if(!isAuthenticated("student"))return;
   const session=currentSession(),studentId=session?.studentId;
   const list=getLessons().filter(l=>l.grade===currentGrade).sort((a,b)=>a.order-b.order);
   const host=document.getElementById("lessonList");
@@ -600,38 +777,71 @@ function renderLessons(){
 }
 function backToGrade(){openGrade(currentGrade)}
 
-/* فتح الفيديو بعد استرجاعه من قاعدة بيانات المتصفح */
+/* فتح الدرس وتشغيل الفيديو السحابي من أي متصفح بعد تسجيل الدخول */
 async function openLesson(id){
+  if(!isAuthenticated("student")){showAuth();setAuthMode("student");setMessage("authMessage","يجب تسجيل الدخول أولاً لمشاهدة الدرس.","error");return}
   const session=currentSession();const lesson=getLessons().find(l=>l.id===id);
   if(!lesson||!isUnlocked(session?.studentId,lesson)){alert("هذا الدرس مغلق. يجب اجتياز امتحان الدرس السابق بنسبة 50% أو طلب فتحه من المدرس.");return}
   currentLessonId=id;
   document.getElementById("lessonTitle").textContent=lesson.title;
   document.getElementById("lessonDescription").textContent=lesson.description||"";
   const video=document.getElementById("lessonVideo");
-  const file=await getVideo(id);
-  if(file){if(video.dataset.objectUrl)URL.revokeObjectURL(video.dataset.objectUrl);const url=URL.createObjectURL(file);video.src=url;video.dataset.objectUrl=url;video.classList.remove("hidden")}
-  else{video.removeAttribute("src");video.load();video.classList.add("hidden")}
+  if(video.dataset.objectUrl){URL.revokeObjectURL(video.dataset.objectUrl);delete video.dataset.objectUrl}
+
+  let videoSrc=lesson.videoUrl||"";
+  if(!videoSrc){
+    const localFile=await getLocalVideoCache(id);
+    if(localFile){
+      const objUrl=URL.createObjectURL(localFile);
+      video.dataset.objectUrl=objUrl;
+      videoSrc=objUrl;
+    }
+  }
+  if(videoSrc){
+    video.src=videoSrc;
+    video.load();
+    video.classList.remove("hidden");
+  }else{
+    video.removeAttribute("src");
+    video.load();
+    video.classList.add("hidden");
+  }
   const exam=getExams().find(e=>e.lessonId===id);
   document.getElementById("startExamBtn").disabled=!exam;
   document.getElementById("watchHint").textContent=exam?"يمكنك حل الامتحان مرة واحدة فقط. بعد التسليم يمكنك مراجعة الإجابات، وإعادة المحاولة تحتاج إذن المعلمة.":"لم يضف المدرس امتحاناً لهذا الدرس بعد.";
   showView("lessonView");
 }
 
-/* عرض امتحان الدرس وأسئلته */
 function openExam(){openExamFor(currentLessonId)}
-function openExamFor(lessonId){
-  const exam=getExams().find(e=>e.lessonId===lessonId);
-  if(!exam){alert("لا يوجد امتحان لهذا الدرس بعد.");return}
+async function openExamFor(lessonId){
+  if(!isAuthenticated("student")){showAuth();setAuthMode("student");setMessage("authMessage","يجب تسجيل الدخول أولاً لدخول الامتحان.","error");return}
   const session=currentSession();
   const lesson=getLessons().find(l=>l.id===lessonId);
   if(!isUnlocked(session?.studentId,lesson)){alert("الدرس مغلق.");return}
+
+  try{
+    const [exRes, reRes] = await Promise.all([
+      sb.from("exams").select("*").eq("lesson_id",lessonId).maybeSingle(),
+      sb.from("results").select("*").eq("student_id",session.studentId).eq("lesson_id",lessonId).maybeSingle()
+    ]);
+    if(exRes.data){
+      const mappedEx=mapExamFromDB(exRes.data);
+      writeDB(DB_KEYS.exams,[...getExams().filter(e=>e.lessonId!==lessonId),mappedEx]);
+    }
+    if(reRes.data){
+      const mappedRe=mapProgressFromDB(reRes.data);
+      writeDB(DB_KEYS.progress,[...getProgress().filter(p=>!(p.studentId===session.studentId&&p.lessonId===lessonId)),mappedRe]);
+    }
+  }catch(e){}
+
+  const exam=getExams().find(e=>e.lessonId===lessonId);
+  if(!exam){alert("لا يوجد امتحان لهذا الدرس بعد.");return}
   currentLessonId=lessonId;currentExam=exam;
 
   const progress=getProgress();
   let record=progress.find(x=>x.studentId===session.studentId&&x.lessonId===lessonId);
   const reviewOnly=!!(record?.examSubmitted && !record?.allowRetake);
 
-  // لو المدرس سمح بمحاولة جديدة، نحفظ المحاولة السابقة في السجل ثم نستهلك الإذن.
   if(record?.allowRetake){
     record.attemptHistory=record.attemptHistory||[];
     if(record.examSubmitted){
@@ -645,6 +855,14 @@ function openExamFor(lessonId){
     record.examSubmitted=false;
     record.savedAnswers=[];
     saveProgress(progress);
+    try{
+      await sb.from("results").upsert([{
+        student_id:session.studentId,lesson_id:lessonId,
+        score:record.score||0,last_score:record.lastScore||0,attempts:record.attempts||0,
+        exam_submitted:false,allow_retake:false,teacher_unlocked:!!record.teacherUnlocked,
+        saved_answers:[],attempt_history:record.attemptHistory,updated_at:new Date().toISOString()
+      }],{onConflict:"student_id,lesson_id"});
+    }catch(e){}
   }
 
   document.getElementById("examTitle").textContent=exam.title+(reviewOnly?" — مراجعة المحاولة السابقة":"");
@@ -676,8 +894,6 @@ function openExamFor(lessonId){
   }
   showView("examView");
 }
-/* إعداد وتصميم محمود أبوزايد: تثبيت إجابة الطالب فور اختيارها */
-let examLockedAnswers={};
 
 function lockExamAnswer(questionIndex, selectedIndex){
   if(!currentExam || Object.prototype.hasOwnProperty.call(examLockedAnswers,questionIndex))return;
@@ -705,10 +921,9 @@ function lockExamAnswer(questionIndex, selectedIndex){
   }
 }
 
-function submitExam(){
-  if(!currentExam)return;
+async function submitExam(){
+  if(!currentExam || !isAuthenticated("student"))return;
   const session=currentSession();
-  if(!session || session.role!=="student"){alert("هذه العملية متاحة للطالب المسجل فقط.");return}
   const progressCheck=getProgress();
   const alreadySubmitted=progressCheck.find(x=>x.studentId===session.studentId&&x.lessonId===currentLessonId);
   if(alreadySubmitted?.examSubmitted && !alreadySubmitted?.allowRetake){
@@ -723,12 +938,15 @@ function submitExam(){
     return;
   }
 
+  const submitBtn=document.getElementById("submitExamBtn");
+  submitBtn.disabled=true;
+
   const answers=currentExam.questions.map((q,i)=>examLockedAnswers[i]??-1);
   const correct=currentExam.questions.reduce((n,q,i)=>n+(answers[i]===Number(q.answer)?1:0),0);
   const score=total?Math.round(correct/total*100):0;
   const studentId=session.studentId;
   const progress=getProgress();let p=progress.find(x=>x.studentId===studentId&&x.lessonId===currentLessonId);
-  if(!p){p={studentId,lessonId:currentLessonId,score:0,teacherUnlocked:false,attempts:0};progress.push(p)}
+  if(!p){p={studentId,lessonId:currentLessonId,score:0,teacherUnlocked:false,attempts:0,attemptHistory:[]};progress.push(p)}
   p.score=Math.max(p.score,score);
   p.lastScore=score;
   p.savedAnswers=answers.slice();
@@ -737,6 +955,25 @@ function submitExam(){
   p.attempts=(p.attempts||0)+1;
   p.updatedAt=new Date().toISOString();
   saveProgress(progress);
+
+  try{
+    await sb.from("results").upsert([{
+      student_id:studentId,
+      lesson_id:currentLessonId,
+      score:p.score,
+      last_score:p.lastScore,
+      attempts:p.attempts,
+      exam_submitted:true,
+      allow_retake:false,
+      teacher_unlocked:!!p.teacherUnlocked,
+      saved_answers:p.savedAnswers,
+      attempt_history:p.attemptHistory||[],
+      updated_at:p.updatedAt
+    }],{onConflict:"student_id,lesson_id"});
+  }catch(err){
+    console.error("تعذر حفظ النتيجة في Supabase:",err);
+  }
+
   const pass=score>=50||p.teacherUnlocked;
   const whatsapp="https://wa.me/201201317526?text="+encodeURIComponent("مرحباً، اريد الاشتراك في AlGawish Academy التعليمية");
   const result=document.getElementById("examFinalResult");
@@ -747,32 +984,34 @@ function submitExam(){
     <div class="result-score">${score}%</div>
     <p>${pass?"نتيجتك 50% أو أكثر، وتم تسجيل اجتيازك وفتح الدرس التالي حسب ترتيب المنهج.":"درجتك أقل من 50%، لذلك سيظل الدرس التالي مغلقاً حتى تسمح لك المعلمة بإعادة الامتحان أو تفتح الدرس."}</p>
     <p class="muted">الإجابات الصحيحة: ${correct} من ${total}</p>
-    ${pass?'<div class="notice ok">تم حفظ نتيجتك بنجاح. استمر في التعلم والتقدم! 🌟</div>':'<div class="notice error">للمساعدة أو الاستفسار تواصل مع مسؤول الاشتراكات.</div><a class="btn goldbtn" target="_blank" rel="noopener" href="'+whatsapp+'">تواصل مع المسؤول عبر واتساب</a>'}
+    ${pass?'<div class="notice ok">تم حفظ نتيجتك في قاعدة البيانات بنجاح. استمر في التعلم والتقدم! 🌟</div>':'<div class="notice error">للمساعدة أو الاستفسار تواصل مع مسؤول الاشتراكات.</div><a class="btn goldbtn" target="_blank" rel="noopener" href="'+whatsapp+'">تواصل مع المسؤول عبر واتساب</a>'}
     <div style="margin-top:16px"><button class="btn alt" onclick="backToGrade()">العودة إلى الدروس</button></div>
   </div>`;
-  document.getElementById("submitExamBtn").disabled=true;
   result.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
-/* لوحة المدرس: التبديل بين أقسام الإدارة */
 function teacherTab(tab,button){
+  if(!isAuthenticated("teacher")){showAuth();setAuthMode("teacher");return}
   ["teacherContent","teacherExam","teacherStudents"].forEach(id=>document.getElementById(id).classList.add("hidden"));
   document.getElementById(tab==="content"?"teacherContent":tab==="exam"?"teacherExam":"teacherStudents").classList.remove("hidden");
   document.querySelectorAll("#teacherView .tab").forEach(b=>b.classList.remove("active"));
   if(button)button.classList.add("active");
 }
-function refreshTeacherPanel(){renderTeacherStats();renderAdminLessons();refreshExamLessonSelect();renderStudentsTable()}
-/* إعداد وتصميم محمود أبوزايد: مؤشرات سريعة للمعلمة */
+function refreshTeacherPanel(){
+  if(!isAuthenticated("teacher"))return;
+  renderTeacherStats();renderAdminLessons();refreshExamLessonSelect();renderStudentsTable();
+}
 function renderTeacherStats(){
   const host=document.getElementById("teacherStats");if(!host)return;
   const students=getStudents(),lessons=getLessons(),exams=getExams(),progress=getProgress();
   const passed=progress.filter(p=>p.examSubmitted&&(p.lastScore??p.score)>=50).length;
-  const active=readDB(DB_KEYS.subscriptions,[]).filter(s=>!s.cancelled&&(!s.expiresAt||new Date(s.expiresAt).getTime()>Date.now())).length;
   host.innerHTML=[["👩‍🎓",students.length,"إجمالي الطلاب"],["🎥",lessons.length,"الدروس المضافة"],["📝",exams.length,"الامتحانات"],["⭐",passed,"امتحانات مجتازة"]].map(x=>`<div class="teacher-stat"><span>${x[0]} ${x[2]}</span><b>${x[1]}</b></div>`).join("");
 }
 
-/* إضافة درس ورفع ملف الفيديو إلى IndexedDB */
+/* إضافة درس ورفع الفيديو إلى Supabase Storage وحفظ رابط الدرس في جدول lessons */
 async function addLesson(){
+  if(!isAuthenticated("teacher")){alert("هذه الصلاحية للمدرس فقط.");return}
+  const btn=document.getElementById("addLessonBtn");
   try{
     const grade=document.getElementById("newGrade").value;
     const title=document.getElementById("newLessonTitle").value.trim();
@@ -780,39 +1019,91 @@ async function addLesson(){
     const file=document.getElementById("newLessonVideo").files[0];
     if(!title||!file){setMessage("lessonAdminMessage","اكتب عنوان الدرس واختر ملف فيديو.","error");return}
     if(!file.type.startsWith("video/")){setMessage("lessonAdminMessage","الملف المختار ليس فيديو.","error");return}
-    const id=uid();await saveVideo(file,id);
-    const lessons=getLessons();lessons.push({id,grade,title,description,order:lessons.filter(l=>l.grade===grade).length+1,createdAt:new Date().toISOString()});writeDB(DB_KEYS.lessons,lessons);
-    document.getElementById("newLessonTitle").value="";document.getElementById("newLessonDesc").value="";document.getElementById("newLessonVideo").value="";
-    setMessage("lessonAdminMessage","تمت إضافة الدرس والفيديو بنجاح.","ok");refreshTeacherPanel();
-  }catch(e){setMessage("lessonAdminMessage","تعذر حفظ الفيديو. ربما مساحة المتصفح غير كافية.","error")}
+    btn.disabled=true;
+    setMessage("lessonAdminMessage","جاري رفع الفيديو إلى السحابة وحفظ الدرس...","");
+
+    const lessonId=uid();
+    const { publicUrl } = await uploadLessonVideoToStorage(lessonId, file);
+    await saveLocalVideoCache(file, lessonId);
+
+    const sortOrder=getLessons().filter(l=>l.grade===grade).length+1;
+    const { data: inserted, error } = await sb
+      .from("lessons")
+      .insert([{ id:lessonId, grade, title, description, video_url:publicUrl, sort_order:sortOrder }])
+      .select()
+      .single();
+    if(error) throw error;
+
+    const lesson=mapLessonFromDB(inserted);
+    writeDB(DB_KEYS.lessons,[...getLessons(),lesson]);
+
+    document.getElementById("newLessonTitle").value="";
+    document.getElementById("newLessonDesc").value="";
+    document.getElementById("newLessonVideo").value="";
+    setMessage("lessonAdminMessage","تم رفع الفيديو وحفظ الدرس في قاعدة البيانات بنجاح. أصبح متاحاً للطلاب من أي متصفح.","ok");
+    refreshTeacherPanel();
+  }catch(e){
+    console.error(e);
+    setMessage("lessonAdminMessage","تعذر رفع الفيديو أو حفظ الدرس. تأكد من إنشاء Bucket باسم lesson-videos وتفعيل صلاحياته في Supabase.","error");
+  }finally{
+    btn.disabled=false;
+  }
 }
+
 function renderAdminLessons(){
   const host=document.getElementById("adminLessonList");if(!host)return;
   const q=(document.getElementById("adminLessonSearch")?.value||"").trim().toLowerCase();
   const lessons=getLessons().sort((a,b)=>String(a.grade).localeCompare(String(b.grade))||a.order-b.order).filter(l=>(l.title+" "+gradeLabel(l.grade)).toLowerCase().includes(q));
-  host.innerHTML=lessons.length?lessons.map(l=>`<div class="lesson"><div><b>${esc(l.title)}</b><div class="muted small">${gradeLabel(l.grade)} • الدرس ${l.order||1}</div></div><div class="admin-actions"><button class="btn alt" onclick="editLesson('${l.id}')">تعديل</button><button class="btn alt" onclick="moveLesson('${l.id}',-1)" title="رفع الدرس">↑</button><button class="btn alt" onclick="moveLesson('${l.id}',1)" title="خفض الدرس">↓</button><button class="btn red" onclick="removeLesson('${l.id}')">حذف</button></div></div>`).join(""):'<div class="empty">لا توجد دروس مطابقة للبحث.</div>';
+  host.innerHTML=lessons.length?lessons.map(l=>`<div class="lesson"><div><b>${esc(l.title)}</b><div class="muted small">${gradeLabel(l.grade)} • الدرس ${l.order||1} ${l.videoUrl?'• <span class="success">مرفوع سحابياً</span>':'• <span class="muted">بدون رابط سحابي</span>'}</div></div><div class="admin-actions"><button class="btn alt" onclick="editLesson('${l.id}')">تعديل</button><button class="btn alt" onclick="moveLesson('${l.id}',-1)" title="رفع الدرس">↑</button><button class="btn alt" onclick="moveLesson('${l.id}',1)" title="خفض الدرس">↓</button><button class="btn red" onclick="removeLesson('${l.id}')">حذف</button></div></div>`).join(""):'<div class="empty">لا توجد دروس مطابقة للبحث.</div>';
 }
-/* تعديل عنوان الدرس ووصفه دون حذف الفيديو أو الامتحان */
-function editLesson(id){
+
+async function editLesson(id){
+  if(!isAuthenticated("teacher"))return;
   const list=getLessons(),lesson=list.find(x=>x.id===id);if(!lesson)return;
   const title=prompt("عنوان الدرس:",lesson.title);if(title===null)return;
   const description=prompt("وصف الدرس:",lesson.description||"");if(description===null)return;
   if(!title.trim()){alert("عنوان الدرس لا يمكن أن يكون فارغاً.");return}
-  lesson.title=title.trim();lesson.description=description.trim();writeDB(DB_KEYS.lessons,list);refreshTeacherPanel();
+  lesson.title=title.trim();lesson.description=description.trim();
+  try{
+    const { error } = await sb.from("lessons").update({ title:lesson.title, description:lesson.description }).eq("id",id);
+    if(error) throw error;
+    writeDB(DB_KEYS.lessons,list);
+    refreshTeacherPanel();
+  }catch(e){alert("تعذر تعديل الدرس في قاعدة البيانات.")}
 }
-/* تغيير ترتيب الدروس داخل الصف */
-function moveLesson(id,direction){
+
+async function moveLesson(id,direction){
+  if(!isAuthenticated("teacher"))return;
   const list=getLessons(),item=list.find(x=>x.id===id);if(!item)return;
   const same=list.filter(x=>x.grade===item.grade).sort((a,b)=>(a.order||0)-(b.order||0));
   const index=same.findIndex(x=>x.id===id),target=same[index+direction];if(!target)return;
-  const old=item.order;item.order=target.order;target.order=old;writeDB(DB_KEYS.lessons,list);renderAdminLessons();
-}
-async function removeLesson(id){
-  if(!confirm("هل تريد حذف الدرس والفيديو والامتحان المرتبط به؟"))return;
-  await deleteVideo(id);writeDB(DB_KEYS.lessons,getLessons().filter(l=>l.id!==id));writeDB(DB_KEYS.exams,getExams().filter(e=>e.lessonId!==id));writeDB(DB_KEYS.progress,getProgress().filter(p=>p.lessonId!==id));refreshTeacherPanel();
+  const old=item.order;item.order=target.order;target.order=old;
+  try{
+    await Promise.all([
+      sb.from("lessons").update({ sort_order:item.order }).eq("id",item.id),
+      sb.from("lessons").update({ sort_order:target.order }).eq("id",target.id)
+    ]);
+    writeDB(DB_KEYS.lessons,list);
+    renderAdminLessons();
+  }catch(e){alert("تعذر تحديث الترتيب في قاعدة البيانات.")}
 }
 
-/* إنشاء أسئلة الامتحان من لوحة المدرس */
+async function removeLesson(id){
+  if(!isAuthenticated("teacher"))return;
+  if(!confirm("هل تريد حذف الدرس والفيديو والامتحان المرتبط به؟"))return;
+  const lesson=getLessons().find(l=>l.id===id);
+  try{
+    const { error } = await sb.from("lessons").delete().eq("id",id);
+    if(error) throw error;
+    await deleteLessonVideoFromStorage(id, lesson?.videoUrl||"");
+    await deleteLocalVideoCache(id);
+    writeDB(DB_KEYS.lessons,getLessons().filter(l=>l.id!==id));
+    writeDB(DB_KEYS.exams,getExams().filter(e=>e.lessonId!==id));
+    writeDB(DB_KEYS.progress,getProgress().filter(p=>p.lessonId!==id));
+    refreshTeacherPanel();
+  }catch(e){alert("تعذر حذف الدرس من قاعدة البيانات.")}
+}
+
 function addQuestionEditor(){
   const n=questionEditorCount++;
   const div=document.createElement("div");div.className="question";div.dataset.question="1";
@@ -823,7 +1114,10 @@ function refreshExamLessonSelect(){
   const select=document.getElementById("examLesson");
   select.innerHTML=getLessons().map(l=>`<option value="${l.id}">${esc(l.title)} — ${gradeLabel(l.grade)}</option>`).join("");
 }
-function saveExam(){
+
+async function saveExam(){
+  if(!isAuthenticated("teacher")){alert("هذه الصلاحية للمدرس فقط.");return}
+  const btn=document.getElementById("saveExamBtn");
   const lessonId=document.getElementById("examLesson").value;
   const title=document.getElementById("newExamTitle").value.trim();
   const blocks=[...document.querySelectorAll("#questionBuilder [data-question]")];
@@ -836,13 +1130,29 @@ function saveExam(){
     if(!text||options.some(x=>!x)){setMessage("examAdminMessage","أكمل نص كل سؤال والاختيارات الأربعة.","error");return}
     questions.push({text,options,answer});
   }
-  const exams=getExams().filter(e=>e.lessonId!==lessonId);
-  exams.push({id:uid(),lessonId,title,questions,createdAt:new Date().toISOString()});
-  writeDB(DB_KEYS.exams,exams);document.getElementById("questionBuilder").innerHTML="";questionEditorCount=0;document.getElementById("newExamTitle").value="";
-  setMessage("examAdminMessage","تم حفظ الامتحان بنجاح.","ok");
+  btn.disabled=true;
+  try{
+    await sb.from("exams").delete().eq("lesson_id",lessonId);
+    const { data: inserted, error } = await sb
+      .from("exams")
+      .insert([{ lesson_id:lessonId, title, questions }])
+      .select()
+      .single();
+    if(error) throw error;
+
+    const mapped=mapExamFromDB(inserted);
+    writeDB(DB_KEYS.exams,[...getExams().filter(e=>e.lessonId!==lessonId),mapped]);
+    document.getElementById("questionBuilder").innerHTML="";questionEditorCount=0;document.getElementById("newExamTitle").value="";
+    setMessage("examAdminMessage","تم حفظ الامتحان في قاعدة البيانات بنجاح.","ok");
+    renderTeacherStats();
+  }catch(e){
+    console.error(e);
+    setMessage("examAdminMessage","تعذر حفظ الامتحان في Supabase.","error");
+  }finally{
+    btn.disabled=false;
+  }
 }
 
-/* إدارة الطلاب: تعديل الدرجة وفتح الدرس وإعادة المحاولة */
 function renderStudentsTable(){
   const allStudents=getStudents(),lessons=getLessons(),progress=getProgress(),host=document.getElementById("studentsTable");
   if(!allStudents.length){host.innerHTML='<div class="empty">لم يسجل أي طالب حتى الآن.</div>';return}
@@ -851,7 +1161,7 @@ function renderStudentsTable(){
   const subs=readDB(DB_KEYS.subscriptions,[]);
   const rows=students.map(s=>{
     const sub=subs.find(x=>x.studentId===s.id);
-    const active=!!(sub && (!sub.expiresAt || new Date(sub.expiresAt).getTime()>Date.now()));
+    const active=!!(sub && !sub.cancelled && (!sub.expiresAt || new Date(sub.expiresAt).getTime()>Date.now()));
     const status=active?(sub.type==="term"?"اشتراك ترم":"اشتراك شهري"):"بدون اشتراك";
     const details=active?(sub.type==="month"?` — ${sub.lessonLimit} حصص`:` — حتى ${new Date(sub.expiresAt).toLocaleDateString("ar-EG")}`):"";
     return `<tr><td>${esc(s.name)}</td><td dir="ltr">${esc(s.phone||s.identity)}</td><td>${gradeLabel(s.grade)}${s.stage==="prep"?`<div class="muted small">${s.schoolType==="language"?"مدارس لغات":"مدارس عربي"}</div>`:""}</td><td>${status}${details}</td><td><button class="btn goldbtn" onclick="grantSubscription('${s.id}')">تفعيل / تغيير الاشتراك</button> ${active?`<button class="btn red" onclick="cancelSubscription('${s.id}')">إلغاء الاشتراك</button>`:""} <button class="btn red" onclick="deleteStudentAccount('${s.id}')">حذف الحساب</button></td></tr>`;
@@ -860,28 +1170,27 @@ function renderStudentsTable(){
   host.innerHTML=`<h3>إدارة اشتراكات الطلاب</h3><p class="muted small">يمكنك تفعيل اشتراك شهري بعدد حصص محدد أو اشتراك ترم، كما يمكنك إلغاء أي اشتراك في أي وقت.</p><div class="tablewrap"><table><thead><tr><th>الطالب</th><th>رقم الهاتف</th><th>الصف</th><th>حالة الاشتراك</th><th>إدارة الاشتراك</th></tr></thead><tbody>${rows.join("")}</tbody></table></div><hr><h3>متابعة الدرجات وفتح الدروس</h3><div class="tablewrap"><table><thead><tr><th>الطالب</th><th>الدرس</th><th>الدرجة</th><th>الحالة</th><th>إجراءات</th></tr></thead><tbody>${students.flatMap(s=>lessons.filter(l=>l.grade===s.grade).map(l=>{const p=progress.find(x=>x.studentId===s.id&&x.lessonId===l.id);return `<tr><td>${esc(s.name)}</td><td>${esc(l.title)}</td><td>${p?(p.lastScore??p.score)+"%":"لم يمتحن"}</td><td>${p?.teacherUnlocked?"مفتوح بواسطة المدرس":p?.score>=50?"اجتاز":"مغلق"}</td><td><button class="btn alt" onclick="editStudentScore('${s.id}','${l.id}')">تعديل الدرجة</button> <button class="btn green" onclick="teacherUnlock('${s.id}','${l.id}')">فتح الدرس</button> <button class="btn" onclick="allowRetake('${s.id}','${l.id}')">إعادة الامتحان</button></td></tr>`})).join("")}</tbody></table></div>`;
 }
 
-/* إعداد وتصميم محمود أبوزايد: حذف حساب الطالب وبياناته التابعة من هذا المتصفح */
-function deleteStudentAccount(studentId){
-  const session=currentSession();
-  if(!session || session.role!=="teacher"){
-    alert("حذف الحساب متاح للمدرس فقط.");
-    return;
-  }
+async function deleteStudentAccount(studentId){
+  if(!isAuthenticated("teacher")){alert("حذف الحساب متاح للمدرس فقط.");return}
   const student=getStudents().find(s=>s.id===studentId);
   if(!student){alert("هذا الحساب غير موجود.");return}
-  if(!confirm(`تحذير: سيتم حذف حساب الطالب "${student.name}" ونتائجه واشتراكه نهائياً من بيانات هذا المتصفح. هل تريد المتابعة؟`))return;
+  if(!confirm(`تحذير: سيتم حذف حساب الطالب "${student.name}" ونتائجه واشتراكه نهائياً. هل تريد المتابعة؟`))return;
 
-  writeDB(DB_KEYS.students,getStudents().filter(s=>s.id!==studentId));
-  saveProgress(getProgress().filter(p=>p.studentId!==studentId));
-  writeDB(DB_KEYS.subscriptions,readDB(DB_KEYS.subscriptions,[]).filter(s=>s.studentId!==studentId));
-  if(currentSession()?.studentId===studentId)localStorage.removeItem(DB_KEYS.session);
-
-  renderStudentsTable();
-  alert("تم حذف حساب الطالب ونتائجه واشتراكه من هذا المتصفح.");
+  try{
+    const { error } = await sb.from("students").delete().eq("id",studentId);
+    if(error) throw error;
+    writeDB(DB_KEYS.students,getStudents().filter(s=>s.id!==studentId));
+    saveProgress(getProgress().filter(p=>p.studentId!==studentId));
+    writeDB(DB_KEYS.subscriptions,readDB(DB_KEYS.subscriptions,[]).filter(s=>s.studentId!==studentId));
+    if(currentSession()?.studentId===studentId){localStorage.removeItem(DB_KEYS.session);updateHeaderAuthState()}
+    renderStudentsTable();
+    renderTeacherStats();
+    alert("تم حذف حساب الطالب بنجاح.");
+  }catch(e){alert("تعذر حذف الطالب من قاعدة البيانات.")}
 }
 
-/* إعداد وتصميم محمود أبوزايد: المدرس يختار نوع الاشتراك ويدير إلغاءه */
-function grantSubscription(studentId){
+async function grantSubscription(studentId){
+  if(!isAuthenticated("teacher"))return;
   const choice=prompt("اختر نوع الاشتراك بكتابة الرقم:\\n1 - اشتراك شهري (بعدد حصص تحدده)\\n2 - اشتراك ترم (كل دروس الترم)","1");
   if(choice===null)return;
   const type=choice.trim()==="1"?"month":choice.trim()==="2"?"term":null;
@@ -896,65 +1205,166 @@ function grantSubscription(studentId){
     expiresAt=date.trim()?new Date(date.trim()+"T23:59:59").toISOString():new Date(Date.now()+120*24*60*60*1000).toISOString();
     if(Number.isNaN(new Date(expiresAt).getTime())){alert("تاريخ غير صحيح.");return}
   }
-  const subs=readDB(DB_KEYS.subscriptions,[]).filter(s=>s.studentId!==studentId);
-  subs.push({studentId,type,lessonLimit,expiresAt,activatedAt:new Date().toISOString(),cancelled:false});
-  writeDB(DB_KEYS.subscriptions,subs);
-  renderStudentsTable();
-  alert(type==="month"?"تم تفعيل الاشتراك الشهري للطالب.":"تم تفعيل اشتراك الترم وفتح دروس الترم للطالب.");
+
+  try{
+    const { data: savedSub, error } = await sb
+      .from("subscriptions")
+      .upsert([{
+        student_id:studentId,
+        sub_type:type,
+        lesson_limit:lessonLimit,
+        expires_at:expiresAt,
+        cancelled:false,
+        activated_at:new Date().toISOString()
+      }],{onConflict:"student_id"})
+      .select()
+      .single();
+    if(error) throw error;
+
+    const subs=readDB(DB_KEYS.subscriptions,[]).filter(s=>s.studentId!==studentId);
+    subs.push(mapSubFromDB(savedSub));
+    writeDB(DB_KEYS.subscriptions,subs);
+    renderStudentsTable();
+    alert(type==="month"?"تم تفعيل الاشتراك الشهري للطالب.":"تم تفعيل اشتراك الترم وفتح دروس الترم للطالب.");
+  }catch(e){alert("تعذر حفظ الاشتراك في قاعدة البيانات.")}
 }
-function cancelSubscription(studentId){
+
+async function cancelSubscription(studentId){
+  if(!isAuthenticated("teacher"))return;
   if(!confirm("هل أنت متأكد من إلغاء اشتراك هذا الطالب الآن؟ سيتم إغلاق الدروس المدفوعة فوراً."))return;
-  const subs=readDB(DB_KEYS.subscriptions,[]);
-  const sub=subs.find(s=>s.studentId===studentId);
-  if(!sub){alert("لا يوجد اشتراك لهذا الطالب.");return}
-  sub.cancelled=true;
-  sub.cancelledAt=new Date().toISOString();
-  sub.expiresAt=new Date().toISOString();
-  writeDB(DB_KEYS.subscriptions,subs);
-  renderStudentsTable();
-  alert("تم إلغاء الاشتراك. يمكنك تفعيله مرة أخرى في أي وقت.");
+  const nowIso=new Date().toISOString();
+  try{
+    const { error } = await sb
+      .from("subscriptions")
+      .update({ cancelled:true, expires_at:nowIso })
+      .eq("student_id",studentId);
+    if(error) throw error;
+
+    const subs=readDB(DB_KEYS.subscriptions,[]);
+    const sub=subs.find(s=>s.studentId===studentId);
+    if(sub){sub.cancelled=true;sub.expiresAt=nowIso}
+    writeDB(DB_KEYS.subscriptions,subs);
+    renderStudentsTable();
+    alert("تم إلغاء الاشتراك.");
+  }catch(e){alert("تعذر إلغاء الاشتراك في قاعدة البيانات.")}
 }
-function editStudentScore(studentId,lessonId){
-  if(currentSession()?.role!=="teacher"){alert("هذه الصلاحية للمدرس فقط.");return}
-  const p=getProgress();let item=p.find(x=>x.studentId===studentId&&x.lessonId===lessonId);
+
+async function upsertProgressRow(studentId,lessonId,patch){
+  const p=getProgress();
+  let item=p.find(x=>x.studentId===studentId&&x.lessonId===lessonId);
+  if(!item){
+    item={studentId,lessonId,score:0,lastScore:0,attempts:0,examSubmitted:false,allowRetake:false,teacherUnlocked:false,savedAnswers:[],attemptHistory:[]};
+    p.push(item);
+  }
+  Object.assign(item,patch,{updatedAt:new Date().toISOString()});
+  saveProgress(p);
+
+  const { error } = await sb.from("results").upsert([{
+    student_id:studentId,
+    lesson_id:lessonId,
+    score:item.score||0,
+    last_score:item.lastScore??item.score??0,
+    attempts:item.attempts||0,
+    exam_submitted:!!item.examSubmitted,
+    allow_retake:!!item.allowRetake,
+    teacher_unlocked:!!item.teacherUnlocked,
+    saved_answers:item.savedAnswers||[],
+    attempt_history:item.attemptHistory||[],
+    updated_at:item.updatedAt
+  }],{onConflict:"student_id,lesson_id"});
+  if(error) throw error;
+}
+
+async function editStudentScore(studentId,lessonId){
+  if(!isAuthenticated("teacher")){alert("هذه الصلاحية للمدرس فقط.");return}
+  const item=getProgress().find(x=>x.studentId===studentId&&x.lessonId===lessonId);
   const current=item?.score??0;const value=prompt("اكتب الدرجة الجديدة من 0 إلى 100:",current);
   if(value===null)return;const score=Number(value);
   if(!Number.isFinite(score)||score<0||score>100){alert("الدرجة يجب أن تكون بين 0 و100.");return}
-  if(!item){item={studentId,lessonId,score,attempts:0,teacherUnlocked:false};p.push(item)}
-  item.score=score;item.lastScore=score;item.teacherEdited=true;saveProgress(p);renderStudentsTable();
-}
-function teacherUnlock(studentId,lessonId){
-  if(currentSession()?.role!=="teacher"){alert("هذه الصلاحية للمدرس فقط.");return}
-  const p=getProgress();let item=p.find(x=>x.studentId===studentId&&x.lessonId===lessonId);
-  if(!item){item={studentId,lessonId,score:0,attempts:0,teacherUnlocked:true};p.push(item)}else item.teacherUnlocked=true;
-  saveProgress(p);renderStudentsTable();alert("تم فتح الدرس لهذا الطالب.");
-}
-function allowRetake(studentId,lessonId){
-  if(currentSession()?.role!=="teacher"){alert("هذه الصلاحية للمدرس فقط.");return}
-  const p=getProgress();let item=p.find(x=>x.studentId===studentId&&x.lessonId===lessonId);
-  if(!item){item={studentId,lessonId,score:0,attempts:0,teacherUnlocked:false};p.push(item)}
-  item.allowRetake=true;item.teacherUnlocked=true;saveProgress(p);renderStudentsTable();alert("تم السماح للطالب بإعادة الامتحان وفتح الدرس.");
+  try{
+    await upsertProgressRow(studentId,lessonId,{score,lastScore:score});
+    renderStudentsTable();
+  }catch(e){alert("تعذر تحديث الدرجة في قاعدة البيانات.")}
 }
 
-/* إعداد وتصميم محمود أبوزايد: تصدير واستيراد نسخة احتياطية من بيانات المنصة */
+async function teacherUnlock(studentId,lessonId){
+  if(!isAuthenticated("teacher")){alert("هذه الصلاحية للمدرس فقط.");return}
+  try{
+    await upsertProgressRow(studentId,lessonId,{teacherUnlocked:true});
+    renderStudentsTable();
+    alert("تم فتح الدرس لهذا الطالب.");
+  }catch(e){alert("تعذر فتح الدرس في قاعدة البيانات.")}
+}
+
+async function allowRetake(studentId,lessonId){
+  if(!isAuthenticated("teacher")){alert("هذه الصلاحية للمدرس فقط.");return}
+  try{
+    await upsertProgressRow(studentId,lessonId,{allowRetake:true,teacherUnlocked:true});
+    renderStudentsTable();
+    alert("تم السماح للطالب بإعادة الامتحان وفتح الدرس.");
+  }catch(e){alert("تعذر السماح بالإعادة في قاعدة البيانات.")}
+}
+
 function exportAcademyData(){
-  const backup={app:"AlGawish Academy",version:1,exportedAt:new Date().toISOString(),students:getStudents(),lessons:getLessons(),exams:getExams(),progress:getProgress(),subscriptions:readDB(DB_KEYS.subscriptions,[])};
+  if(!isAuthenticated("teacher"))return;
+  const backup={app:"AlGawish Academy",version:2,exportedAt:new Date().toISOString(),students:getStudents(),lessons:getLessons(),exams:getExams(),progress:getProgress(),subscriptions:readDB(DB_KEYS.subscriptions,[])};
   const blob=new Blob([JSON.stringify(backup,null,2)],{type:"application/json"});
   const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="AlGawish_Academy_Backup.json";a.click();URL.revokeObjectURL(url);
 }
 async function importAcademyData(event){
+  if(!isAuthenticated("teacher"))return;
   const file=event.target.files?.[0];if(!file)return;
   try{
     const data=JSON.parse(await file.text());
     if(data.app!=="AlGawish Academy"||!Array.isArray(data.students)||!Array.isArray(data.lessons)||!Array.isArray(data.exams))throw new Error("invalid");
-    if(!confirm("سيتم استبدال بيانات الطلاب والدروس والامتحانات والدرجات والاشتراكات الحالية. هل تريد المتابعة؟"))return;
-    writeDB(DB_KEYS.students,data.students);writeDB(DB_KEYS.lessons,data.lessons);writeDB(DB_KEYS.exams,data.exams);writeDB(DB_KEYS.progress,Array.isArray(data.progress)?data.progress:[]);writeDB(DB_KEYS.subscriptions,Array.isArray(data.subscriptions)?data.subscriptions:[]);
-    refreshTeacherPanel();alert("تم استيراد البيانات بنجاح. تذكّر أن ملفات الفيديو لا تنتقل ضمن هذه النسخة.");
-  }catch(e){alert("ملف النسخة الاحتياطية غير صالح أو غير متوافق.");}
+    if(!confirm("سيتم رفع واستبدال بيانات الطلاب والدروس والامتحانات والدرجات والاشتراكات في قاعدة البيانات. هل تريد المتابعة؟"))return;
+
+    if(data.students.length){
+      await sb.from("students").upsert(data.students.map(s=>({
+        id:s.id,name:s.name,phone:s.phone||s.identity,password:s.password||"123456",
+        stage:s.stage||"sec",grade:s.grade||"sec1",school_type:s.schoolType||"general",
+        created_at:s.createdAt||new Date().toISOString()
+      })),{onConflict:"id"});
+    }
+    if(data.lessons.length){
+      await sb.from("lessons").upsert(data.lessons.map(l=>({
+        id:l.id,grade:l.grade,title:l.title,description:l.description||"",
+        video_url:l.videoUrl||"",sort_order:l.order||1,created_at:l.createdAt||new Date().toISOString()
+      })),{onConflict:"id"});
+    }
+    if(data.exams.length){
+      await sb.from("exams").upsert(data.exams.map(e=>({
+        id:e.id,lesson_id:e.lessonId,title:e.title,questions:e.questions||[],
+        created_at:e.createdAt||new Date().toISOString()
+      })),{onConflict:"id"});
+    }
+    if(Array.isArray(data.progress) && data.progress.length){
+      await sb.from("results").upsert(data.progress.map(p=>({
+        student_id:p.studentId,lesson_id:p.lessonId,score:p.score||0,
+        last_score:p.lastScore??p.score??0,attempts:p.attempts||0,
+        exam_submitted:!!p.examSubmitted,allow_retake:!!p.allowRetake,
+        teacher_unlocked:!!p.teacherUnlocked,saved_answers:p.savedAnswers||[],
+        attempt_history:p.attemptHistory||[],updated_at:p.updatedAt||new Date().toISOString()
+      })),{onConflict:"student_id,lesson_id"});
+    }
+    if(Array.isArray(data.subscriptions) && data.subscriptions.length){
+      await sb.from("subscriptions").upsert(data.subscriptions.map(s=>({
+        student_id:s.studentId,sub_type:s.type||"month",
+        lesson_limit:s.lessonLimit||0,expires_at:s.expiresAt||null,
+        cancelled:!!s.cancelled,activated_at:s.activatedAt||new Date().toISOString()
+      })),{onConflict:"student_id"});
+    }
+
+    await syncAllFromSupabase();
+    refreshTeacherPanel();
+    alert("تم استيراد ورفع البيانات إلى قاعدة البيانات بنجاح.");
+  }catch(e){
+    console.error(e);
+    alert("ملف النسخة الاحتياطية غير صالح أو تعذر رفعه.");
+  }
   finally{event.target.value="";}
 }
 
-/* إعداد وتصميم محمود أبوزايد: تبديل الوضع الليلي وحفظ اختيار المستخدم */
 function toggleTheme(){
   document.body.classList.toggle("dark-mode");
   const dark=document.body.classList.contains("dark-mode");
@@ -967,7 +1377,6 @@ function loadTheme(){
   const btn=document.getElementById("themeBtn");
   if(btn)btn.textContent=dark?"☀️ الوضع النهاري":"🌙 الوضع الليلي";
 }
-/* تغيير لغة واجهة الموقع بين العربية والإنجليزية */
 function toggleLanguage(){
   language=language==="ar"?"en":"ar";
   document.documentElement.lang=language;document.documentElement.dir=language==="ar"?"rtl":"ltr";
@@ -975,14 +1384,30 @@ function toggleLanguage(){
   document.querySelectorAll("[data-ar][data-en]").forEach(el=>el.textContent=el.getAttribute("data-"+language));
 }
 
-/* بدء الصفحة: تجهيز التاريخ والتحقق من الجلسة المحلية */
 document.getElementById("year").textContent=new Date().getFullYear();
 loadTheme();
-(function init(){
-  const session=currentSession();
-  if(session?.role==="teacher"){refreshTeacherPanel();showView("teacherView")}
-  else if(session?.role==="student"&&getStudents().some(s=>s.id===session.studentId)){openGrade("sec1")}
-  else{goHome()}
+updateHeaderAuthState();
+(async function init(){
+  if(isAuthenticated("teacher")){
+    try{await syncAllFromSupabase()}catch(e){}
+    refreshTeacherPanel();
+    showView("teacherView");
+  }else if(isAuthenticated("student")){
+    const session=currentSession();
+    let student=getStudents().find(s=>s.id===session.studentId);
+    if(!student){
+      try{await syncAllFromSupabase();student=getStudents().find(s=>s.id===session.studentId)}catch(e){}
+    }
+    if(student){
+      await openGrade(student.grade||currentGrade||"sec1");
+    }else{
+      logout();
+    }
+  }else{
+    localStorage.removeItem(DB_KEYS.session);
+    updateHeaderAuthState();
+    goHome();
+  }
 })();
 </script>
 </body>
